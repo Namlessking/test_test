@@ -1,0 +1,94 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: linear-gradient(90deg, rgb(255, 151, 169), rgb(69, 1, 78));
+    color: white;
+    min-height: 100vh;
+}
+
+header {
+    font-size: 30px;
+}
+form, header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 20vh;
+}
+
+form input {
+    border: none;
+    padding: 0.5rem;
+    font-size: 2rem;
+    border-radius: 8px 0px 0px 8px;
+}
+
+form button {
+    border: none;
+    font-size: 1.85rem;
+    padding: 9.5px;
+    background-color: rgb(43, 43, 43);
+    color: white;
+    transition: all 0.2s ease;
+    border-radius: 0px 8px 8px 0px;
+}
+
+button:hover {
+    color: rgb(43, 43, 43);
+    background-color: white;
+}
+
+.todo-container {
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+.newlit {
+    width: 375px;
+    height: 37px;
+    padding-left: 10px;
+    list-style: none;
+}
+.newdiv {
+    background: white;
+    color: black;
+    margin: 20px;
+    font-size: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 8px;
+}
+
+.newadd {
+    padding: 9.5px;
+    background-color: rgb(43, 43, 43);
+    color: white;
+    transition: all 0.2s ease;
+    border: none;
+    padding: 0.5rem;
+    font-size: 1.85rem;
+}
+.newdelete {
+    padding: 9.5px;
+    background-color: rgb(43, 43, 43);
+    color: white;
+    transition: all 0.2s ease;
+    border: none;
+    padding: 0.5rem;
+    font-size: 1.85rem;
+    border-radius: 0px 8px 8px 0px; 
+}
+.fa-plus, .fa-trash-alt {
+    pointer-events: none;
+}
+
+.checked {
+    text-decoration: line-through;
+    opacity: 0.5;
+}
