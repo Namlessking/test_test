@@ -20,7 +20,7 @@ form, header {
     min-height: 20vh;
 }
 
-form input {
+input {
     border: none;
     padding: 0.5rem;
     font-size: 2rem;
@@ -74,6 +74,15 @@ button:hover {
     padding: 0.5rem;
     font-size: 1.85rem;
 }
+.changebtn {
+    padding: 9.5px;
+    background-color: rgb(43, 43, 43);
+    color: white;
+    transition: all 0.2s ease;
+    border: none;
+    padding: 0.5rem;
+    font-size: 1.85rem;
+}
 .newdelete {
     padding: 9.5px;
     background-color: rgb(43, 43, 43);
@@ -84,7 +93,7 @@ button:hover {
     font-size: 1.85rem;
     border-radius: 0px 8px 8px 0px; 
 }
-.fa-plus, .fa-trash-alt {
+.fa-plus, .fa-trash-alt, .fa-carrot {
     pointer-events: none;
 }
 
