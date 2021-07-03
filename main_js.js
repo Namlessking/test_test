@@ -17,11 +17,11 @@ function new_task(event) {
     newdiv.appendChild(newli);
     const addbtn = document.createElement('button')
     addbtn.classList = "newadd";
-    addbtn.innerHTML = '<i class="fas fa-plus"></i>';
+    addbtn.innerHTML = '<i class="fas fa-check"></i>';
     newdiv.appendChild(addbtn);
     const changebtn = document.createElement('button');
     changebtn.classList = "changebtn";
-    changebtn.innerHTML = '<i class="fas fa-carrot"></i>';
+    changebtn.innerHTML = '<i class="fas fa-arrow-circle-left"></i>';
     newdiv.appendChild(changebtn);
     const deletbtn = document.createElement('button');
     deletbtn.classList = "newdelete";
@@ -40,7 +40,33 @@ function delete_task(e){
         const task = item.parentElement;
         task.classList.toggle('checked')
     }
-    if(item.classList[0] === 'changebtn'){
-        console.log(item);
-    }
 }
+
+document.addEventListener('click', (e) => {
+    if(e.target.innerHTML.includes("fa-arrow-circle-left")) {
+        const parent = e.target.parentNode;
+        const children = Array.from(parent.children);
+        const inputChild = children.find((elem) =>
+            elem.className.includes("newlit")
+        );
+
+        inputChild.disabled = false
+
+        inputChild.focus();
+
+        e.target.innerHTML = '<i class="fas fa-spinner"></i>';
+
+    } else if(e.target.innerHTML.includes("fa-spinner")) {
+        const parent = e.target.parentNode;
+        const children = Array.from(parent.children);
+        const inputChild = children.find((elem) =>
+            elem.className.includes("newlit")
+        );
+
+        inputChild.disabled = true;
+
+        e.target.innerHTML = '<i class="fas fa-arrow-circle-left"></i>';
+    } else {
+        console.clear();
+    }
+})

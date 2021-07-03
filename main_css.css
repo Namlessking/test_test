@@ -93,11 +93,27 @@ button:hover {
     font-size: 1.85rem;
     border-radius: 0px 8px 8px 0px; 
 }
-.fa-plus, .fa-trash-alt, .fa-carrot {
+.fa-check, .fa-trash-alt, .fa-spinner, .fa-arrow-circle-left {
     pointer-events: none;
 }
 
 .checked {
     text-decoration: line-through;
     opacity: 0.5;
+}
+
+.fa-spinner {
+    animation-name: spin;
+    animation-duration: 4000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear; 
+}
+
+@keyframes spin {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
+    }
 }
