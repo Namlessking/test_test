@@ -28,6 +28,7 @@ function new_task(event) {
     deletbtn.innerHTML = '<i class="fas fa-trash-alt"></i>';
     newdiv.appendChild(deletbtn);
     input_container.appendChild(newdiv);
+    input_zone.value = "";
 }
 
 function delete_task(e){ 
